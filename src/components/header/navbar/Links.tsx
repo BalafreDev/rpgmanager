@@ -1,28 +1,15 @@
 'use client'
-import { Bars3Icon } from "@heroicons/react/24/outline"
+import { Bars3Icon, PowerIcon, BellIcon } from "@heroicons/react/24/outline"
 import Navlink from "./navLink/NavLink"
 
 import styles from './navbar.module.css'
 import { useState } from "react"
-
-const links = [
-  {
-    title: "Home",
-    path: "/",
-  },
-  {
-    title: "Profile",
-    path: "/profile",
-  },
-  {
-    title: "About",
-    path: "/about",
-  },
-]
+import ProfileMenuPicture from "./ProfileMenu"
 
 // TEMPORARY CONDITIONS
 const session = true
 const isAdmin = true
+const notifications = ['a', 'b', 'c','a','a'];
 
 export default function Links() {
   const [open, setOpen] = useState(false);
@@ -32,36 +19,42 @@ export default function Links() {
     <div className={styles.container}>
 
       <div className={styles.links}>
-        {links.map((link) => (
+        {/* {links.map((link) => (
 
           <Navlink item={link} key={link.title} />
-        ))}
+        ))} */}
         {
           session ? (
             <>
-              {
+              {/* <Navlink item={{ title: "Profile", path: "/profile" }} /> */}
+              <ProfileMenuPicture />
+              {/* {
                 isAdmin && (
                   <Navlink item={{ title: "Admin", path: "/admin" }} />
                 )
-              }
-              <button className={styles.logout}>Logout</button>
+              } */}
+              <button className={styles.notifButton}>
+                <div>
+                  <BellIcon />
+                </div>
+                {notifications.length > 0 && (
+                  <div className={styles.notifNumber}>
+                    {notifications.length}
+                  </div>
+                )}
+              </button>
+              <button className={styles.logoutButton}>
+                <PowerIcon />
+              </button>
             </>
           ) : (
-            <Navlink item={{ title: "Login", path: "/login" }} />
+            <Navlink item={{ title: "Login/Signup", path: "/login", itemType: "link" }} />
           )
         }
       </div>
-      <button className={styles.menuButton} onClick={()=>setOpen(prev=>!prev)}>
-        {/* <div>menu</div> */}
-        <Bars3Icon className={open? styles.open : styles.close} />
+      <button className={styles.menuButton} onClick={() => setOpen(prev => !prev)}>
+        <Bars3Icon className={open ? styles.open : styles.close} />
       </button>
-      {open && (
-        <div className={styles.mobileLinks}>
-          {links.map((link) => (
-            <Navlink item={link} key={link.title} />
-          ))}
-        </div>
-      )}
     </div>
   )
 

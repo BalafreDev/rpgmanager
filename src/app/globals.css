@@ -1,14 +1,17 @@
 :root {
   --test: rebeccapurple;
-  --text: hsl(0, 0%, 0%);
-  --bg: #c8c8fa;
+  --text: hsl(236, 25%, 24%);
+  --bg: hsl(27, 47%, 82%);
+  --alert: #C45957;
+
+  --sbWidth: 150px
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --tint: 235;
-    --text: hsl(var(--tint), 100%, 95%);
-    --bg: hsl(var(--tint), 18%, 12%);
+    --text:  #eedfd2;
+    --bg: #2e304c;
   }
 }
 
@@ -31,51 +34,70 @@ a {
 .container {
   /* background: var(--test); */
   min-width: 475px;
-  width: 1536px;
-  margin: 0 auto;
-  padding-left: 50px;
-  padding-right: 50px;
+  width: 100vw;
+  margin: 0;
+  /* padding-left: 50px;
+  padding-right: 50px; */
 
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: all .4s;
+  /* transition: all .6s; */
 }
 
-.content{
-  margin: auto;
+.sidebar {
+  /* background: var(--test);
+  opacity: .5; */
+  position: fixed;
+  height: 100vh;
+  width: var(--sbWidth);
+}
+
+.r-block{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: var(--sbWidth);
+  padding-left: 20px;
+}
+
+.header {
+  border-bottom: 1px solid var(--text);
+}
+
+.content {
+  align-self: center;
 }
 
 @media (max-width: 1536px) {
   .container {
-    width: 1366px;
+    /* width: 1366px; */
   }
 }
 @media (max-width: 1366px) {
   .container {
-    width: 1280px;
+    /* width: 1280px; */
   }
 }
 @media (max-width: 1280px) {
   .container {
-    width: 1024px;
-    padding-left: 20px;
-    padding-right: 20px;
+    /* width: 1024px; */
   }
 }
 @media (max-width: 1024px) {
   .container {
-    width: 768px;
+    /* width: 768px; */
   }
 }
 @media (max-width: 768px) {
   .container {
-    width: 640px;
+    /* width: 640px; */
   }
 }@media (max-width: 640px) {
   .container {
-    width: 475px;
+    /* width: 475px; */
   }
 }
 

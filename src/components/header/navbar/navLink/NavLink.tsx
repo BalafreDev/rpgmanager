@@ -4,7 +4,7 @@ import Link from 'next/link'
 import styles from './navLink.module.css'
 import { usePathname } from 'next/navigation'
 
-export default function Navlink({ item }: { item: { title: string, path: string } }) {
+export default function Navlink({ item }: { item: { title: string, path: string, itemType: string, } }) {
 
   const pathName = usePathname()
 
