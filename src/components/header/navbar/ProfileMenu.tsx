@@ -7,18 +7,22 @@ const links = [
   {
     title: "Profile",
     path: "/profile",
+    itemType: "link",
   },
   {
     title: "Characters",
     path: "/characters",
+    itemType: "link",
   },
   {
     title: "Groups",
     path: "/groups",
+    itemType: "link",
   },
   {
     title: "Social",
     path: "/social",
+    itemType: "link",
   },
 ]
 
