@@ -1,4 +1,3 @@
-import Links from './Links'
 import Menu from './Menu'
 import Logo from '../header/Logo'
 import styles from './sidebar.module.css'

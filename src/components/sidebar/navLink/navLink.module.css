@@ -1,0 +1,14 @@
+.container {
+  min-width: 130px;
+  padding: 8px 10px;
+  border-radius: 30px;
+  font-weight: 500;
+  /* text-align: right; */
+}
+
+.active {
+  background: var(--text);
+  /* opacity: .8; */
+  color: var(--bg);
+  font-weight: bold; 
+}

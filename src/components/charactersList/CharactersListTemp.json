@@ -1,0 +1,317 @@
+[
+  {
+    "name": "Ganaok",
+    "species": "Human",
+    "age": 17,
+    "height": 167,
+    "hair": "bold",
+    "eyes": "Black",
+    "class": "Lettré",
+    "career": "Sorcerer",
+    "careerTier": "Novice",
+    "careerPath": [
+      "Novice"
+    ],
+    "status": "silver1",
+    "characteristics": {
+      "capCombat": {
+        "init": 36,
+        "augm": 5
+      },
+      "capTir": {
+        "init": 29,
+        "augm": 0
+      },
+      "force": {
+        "init": 36,
+        "augm": 0
+      },
+      "endurance": {
+        "init": 29,
+        "augm": 5
+      },
+      "initiative": {
+        "init": 29,
+        "augm": 0
+      },
+      "agilite": {
+        "init": 27,
+        "augm": 0
+      },
+      "dexterite": {
+        "init": 30,
+        "augm": 0
+      },
+      "intelligence": {
+        "init": 23,
+        "augm": 7
+      },
+      "forceMentale": {
+        "init": 28,
+        "augm": 15
+      },
+      "sociabilite": {
+        "init": 30,
+        "augm": -10
+      }
+    },
+    "basicSkills": {
+      "art": 0,
+      "athletisme": 5,
+      "calme": 5,
+      "charme": 0,
+      "chevaucher": 0,
+      "commandement": 0,
+      "conduiteAttelage": 0,
+      "cacBase": 19,
+      "cacTech": 0,
+      "discretion": 0,
+      "divertissement": 0,
+      "empriseAnimaux": 0,
+      "escalade": 5,
+      "esquive": 10,
+      "intimidation": 5,
+      "intuition": 5,
+      "marchandage": 0,
+      "orientation": 0,
+      "pari": 0,
+      "perception": 5,
+      "ragot": 0,
+      "ramer": 0,
+      "resistance": 10,
+      "resistanceAlcool": 0,
+      "subornation": 0,
+      "survieExterieur": 0
+    },
+    "advancedSkills": [
+      {
+        "name": "Langue de Bataille",
+        "characteristic": "intelligence",
+        "augmentation": 5
+      },
+      {
+        "name": "Savoir du Reikland",
+        "characteristic": "intelligence",
+        "augmentation": 0
+      },
+      {
+        "name": "Soin aux animaux",
+        "characteristic": "intelligence",
+        "augmentation": 0
+      },
+      {
+        "name": "Projectile (arc)",
+        "characteristic": "capTir",
+        "augmentation": 0
+      },
+      {
+        "name": "Focalisation",
+        "characteristic": "forceMentale",
+        "augmentation": 0
+      },
+      {
+        "name": "Langue Magique",
+        "characteristic": "intelligence",
+        "augmentation": 0
+      },
+      {
+        "name": "Savoir Magie",
+        "characteristic": "intelligence",
+        "augmentation": 0
+      }
+    ],
+    "talents": [
+      {
+        "name": "Destinée",
+        "timeTaken": 1,
+        "description": "Page 136 du livre de base",
+        "bonus": [
+          {
+            "characteristic": "",
+            "augmentation": 0
+          }
+        ]
+      },
+      {
+        "name": "Guerrier Né (passif)",
+        "timeTaken": 1,
+        "description": "+5 Capacité de combat",
+        "bonus": [
+          {
+            "characteristic": "capCombat",
+            "augmentation": 5
+          }
+        ]
+      },
+      {
+        "name": "Affable (passif)",
+        "timeTaken": 1,
+        "description": "+5 Sociabilité",
+        "bonus": [
+          {
+            "characteristic": "sociabilite",
+            "augmentation": 5
+          }
+        ]
+      },
+      {
+        "name": "Vision nocturne",
+        "timeTaken": 1,
+        "description": "Max. Bonus Initiative",
+        "bonus": [
+          {
+            "characteristic": "",
+            "augmentation": 0
+          }
+        ]
+      },
+      {
+        "name": "Résitance à la maladie",
+        "timeTaken": 1,
+        "description": "Max. Bonus Endurance",
+        "bonus": [
+          {
+            "characteristic": "",
+            "augmentation": 0
+          }
+        ]
+      },
+      {
+        "name": "Bonnes jambes",
+        "timeTaken": 1,
+        "description": "Max. Bonus Force",
+        "bonus": [
+          {
+            "characteristic": "",
+            "augmentation": 0
+          }
+        ]
+      }
+    ],
+    "destin": {
+      "destin": 3,
+      "chance": 1
+    },
+    "resilience": {
+      "resilience": 3,
+      "determination": 3,
+      "motivations": 0
+    },
+    "experience": {
+      "actuelle": 125,
+      "depensee": 890
+    },
+    "mouvement": {
+      "mouvement": 4,
+      "marche": 8,
+      "course": 16
+    },
+    "ambitions": {
+      "courtTerme": "",
+      "longTerme": "Entrer dans le régiment de garde de l'empereur Karl Franz"
+    },
+    "groupe": {
+      "groupName": "",
+      "groupCourtTerme": "",
+      "groupLongTerme": "",
+      "membres": [
+        "Silvio",
+        "Mesangeay",
+        "Bradni"
+      ]
+    },
+    "armure": [
+      {
+        "name": "Plastron de cuir",
+        "localisation": ["Corps"],
+        "encombrement": 2,
+        "armurePoints": 2,
+        "qualities": "Point Faible"        
+      },
+      {
+        "name": "Cotte de mailles",
+        "localisation": ["Corps", "bras"],
+        "encombrement": 3,
+        "armurePoints": 2,
+        "qualities": "Flexible"        
+      }
+    ],
+    "possessions": [
+      {
+        "name": "Veste à capuche",
+        "encombrement": 0
+      },
+      {
+        "name": "Pantalon",
+        "encombrement": 0
+      },
+      {
+        "name": "Briquet",
+        "encombrement": 0
+      },
+      {
+        "name": "Grimoire de Nécromancie",
+        "encombrement": 0
+      },
+      {
+        "name": "Bâton",
+        "encombrement": 1
+      }
+    ],
+    "armes":[
+      {
+        "name": "Hache à une main",
+        "group": "base",
+        "encombrement": 1,
+        "range": "max",
+        "damages": {
+          "characteristic": "force",
+          "bonus": 4
+        },
+        "qualities": ""
+      },
+      {
+        "name": "Grand bouclier",
+        "group": "base",
+        "encombrement": 3,
+        "range": "très courte",
+        "damages": {
+          "characteristic": "force",
+          "bonus": 3
+        },
+        "qualities": ["Protectrice 3", "Défensif", "Inofensif"]
+      }
+    ],
+    "psychologie": "",
+    "corruptionMutation": [
+      {
+        "name": "Coeur desséché",
+        "bonus": [
+          {
+            "characteristic": "forceMentale",
+            "augmentation": 10
+          },
+          {
+            "characteristic": "sociabilite",
+            "augmentation": -10
+          }
+        ]
+      }
+    ],
+    "spellsPrayers": [
+      {
+        "name": "<NAME>",
+        "incantationLevel": 0,
+        "range": "1m",
+        "targets": "",
+        "duration": "",
+        "effets": ""
+      }
+    ],
+    "sin": "",
+    "richesses": 8767,
+    "encombrementMax": 6,
+    "blessures" : 0,
+    "notesAdditionnelles" : []
+  }
+]

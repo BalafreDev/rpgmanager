@@ -5,9 +5,9 @@ export const linksList = [
     itemType: "link",
   },
   {
-    title: "In Game",
-    path: "/",
-    itemType: "title",
+    title: "",
+    path: "",
+    itemType: "separator",
   },
   {
     title: "Characters",
@@ -20,8 +20,8 @@ export const linksList = [
     itemType: "link",
   },
   {
-    title: "Sep1",
-    path: "/",
+    title: "",
+    path: "",
     itemType: "separator",
   },
   {

@@ -1,10 +1,12 @@
 .container {
-  /* padding: 40px; */
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: center;
+  text-align: center;
   padding-top: 40px;
-  gap: 10px;
+  gap: 20px;
+  text-transform: uppercase;
 }
 
 .logo {
@@ -22,9 +24,14 @@
 }
 
 .menuTitle {
-  font-weight: bold;
+  font-size: small;
+  opacity: .5;
+  align-self: center;
 }
 
 .separator {
+  width: 130px;
   display: flex;
+  border: 1px solid var(--text);
+  opacity: .3;
 }

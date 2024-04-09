@@ -1,7 +1,10 @@
-export default function Characters() {
+import CharactersList from "@/components/charactersList/CharactersList";
+
+export default function Characters() {  
   return (
     <div>
-      Characters Page
+      <h1>My Characters</h1>
+      <CharactersList />
     </div>
   )
 }
