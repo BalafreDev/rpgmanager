@@ -17,25 +17,24 @@ import mongoose from 'mongoose'
 /* UserSchema will correspond to a collection in your MongoDB database. */
 const UserSchema = new mongoose.Schema(
   {
-    pseudo: {
+    username: {
       type: String,
-      // required: [true, 'Veuillez inscrire un pseudo.'],
-      minlength: [3, 'Pseudo trop court.'],
-      maxLength: [20, 'Pseudo trop long.'],
-      trim: true,
+      required: true,
+      unique: true,
+      min: 3,
+      max: 50,
+      // trim: true,
     },
     email: {
       type: String,
-      // required: true,
+      required: true,
       // validate: [isEmail],
       unique: true,
-      lowercase: true,
-      trim: true,
+      max: 50,
     },
     password: {
       type: String,
-      // required: true,
-      max: 1024,
+      required: true,
       minlength: 6,
     },
     picture: {
@@ -57,6 +56,10 @@ const UserSchema = new mongoose.Schema(
     characters: {
       type: [String],
     },
+    isAdmin: {
+      type: Boolean,
+      default: false,
+    },
   },
   {
     timestamps: true,
@@ -64,4 +67,5 @@ const UserSchema = new mongoose.Schema(
 )
 
 // export default mongoose.models.User || mongoose.model<IUsers>('User', UserSchema)
-export default mongoose.models.User || mongoose.model('User', UserSchema)
+// export default mongoose.models.User || mongoose.model('User', UserSchema)
+export const User = mongoose.models.User || mongoose.model('User', UserSchema)

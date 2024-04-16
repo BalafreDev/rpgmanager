@@ -1,0 +1,17 @@
+.caracTable {
+  display: flex;
+}
+
+.caracColumns {
+  flex-direction: column;
+}
+
+.caracCells {
+
+  text-align: center;
+  vertical-align: middle;
+  width: 50px;
+  height: 35px;
+  line-height: 35px;
+  border: 1px solid var(--text);
+}

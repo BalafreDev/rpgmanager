@@ -13,7 +13,10 @@ const averia = Averia_Serif_Libre({ weight: ["300", "400", "700"], subsets: ["la
 
 
 export const metadata: Metadata = {
-  title: "RPGManager.",
+  title: {
+    default: "RPGManager. Homepage",
+    template: "%s | RPGManager.",
+  },
   description: "Just play !",
 };
 
@@ -27,7 +30,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="@/favicon.ico" sizes="any" />
       </head>
-      <body className={inter.className}>
+      <body className={averia.className}>
         <div className="container">
           <div className="sidebar">
             <Sidebar />

@@ -5,7 +5,7 @@ export const linksList = [
     itemType: "link",
   },
   {
-    title: "",
+    title: "sep01",
     path: "",
     itemType: "separator",
   },
@@ -20,7 +20,7 @@ export const linksList = [
     itemType: "link",
   },
   {
-    title: "",
+    title: "sep2",
     path: "",
     itemType: "separator",
   },
@@ -32,6 +32,16 @@ export const linksList = [
   {
     title: "Settings",
     path: "/settings",
+    itemType: "link",
+  },
+  {
+    title: "sep3",
+    path: "",
+    itemType: "separator",
+  },
+  {
+    title: "Blog",
+    path: "/blog",
     itemType: "link",
   },
 ] 

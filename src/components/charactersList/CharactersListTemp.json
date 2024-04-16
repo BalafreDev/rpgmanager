@@ -13,48 +13,48 @@
       "Novice"
     ],
     "status": "silver1",
-    "characteristics": {
-      "capCombat": {
-        "init": 36,
-        "augm": 5
-      },
-      "capTir": {
-        "init": 29,
-        "augm": 0
-      },
-      "force": {
-        "init": 36,
-        "augm": 0
-      },
-      "endurance": {
-        "init": 29,
-        "augm": 5
-      },
-      "initiative": {
-        "init": 29,
-        "augm": 0
-      },
-      "agilite": {
-        "init": 27,
-        "augm": 0
-      },
-      "dexterite": {
-        "init": 30,
-        "augm": 0
-      },
-      "intelligence": {
-        "init": 23,
-        "augm": 7
-      },
-      "forceMentale": {
-        "init": 28,
-        "augm": 15
-      },
-      "sociabilite": {
-        "init": 30,
-        "augm": -10
-      }
-    },
+    "characteristics": [
+      [
+        36,
+        5
+      ],
+      [
+        29,
+        0
+      ],
+      [
+        36,
+        0
+      ],
+      [
+        29,
+        5
+      ],
+      [
+        29,
+        0
+      ],
+      [
+        27,
+        0
+      ],
+      [
+        30,
+        0
+      ],
+      [
+        23,
+        7
+      ],
+      [
+        28,
+        15
+      ],
+      [
+        30,
+        -10
+      ]
+    ],
     "basicSkills": {
       "art": 0,
       "athletisme": 5,
@@ -223,17 +223,22 @@
     "armure": [
       {
         "name": "Plastron de cuir",
-        "localisation": ["Corps"],
+        "localisation": [
+          "Corps"
+        ],
         "encombrement": 2,
         "armurePoints": 2,
-        "qualities": "Point Faible"        
+        "qualities": "Point Faible"
       },
       {
         "name": "Cotte de mailles",
-        "localisation": ["Corps", "bras"],
+        "localisation": [
+          "Corps",
+          "bras"
+        ],
         "encombrement": 3,
         "armurePoints": 2,
-        "qualities": "Flexible"        
+        "qualities": "Flexible"
       }
     ],
     "possessions": [
@@ -258,7 +263,7 @@
         "encombrement": 1
       }
     ],
-    "armes":[
+    "armes": [
       {
         "name": "Hache à une main",
         "group": "base",
@@ -279,7 +284,11 @@
           "characteristic": "force",
           "bonus": 3
         },
-        "qualities": ["Protectrice 3", "Défensif", "Inofensif"]
+        "qualities": [
+          "Protectrice 3",
+          "Défensif",
+          "Inofensif"
+        ]
       }
     ],
     "psychologie": "",
@@ -311,7 +320,7 @@
     "sin": "",
     "richesses": 8767,
     "encombrementMax": 6,
-    "blessures" : 0,
-    "notesAdditionnelles" : []
+    "blessures": 0,
+    "notesAdditionnelles": []
   }
 ]
