@@ -6,7 +6,7 @@ const MONGODB_URI: string = process.env.MONGODB_URI!;
 const connection = { isConnected: 0 }
 
 export const connectDB = async () => {
-
+console.log(typeof MONGODB_URI!)
   try {
     if (connection.isConnected) {
       console.log("Using existing connection")
