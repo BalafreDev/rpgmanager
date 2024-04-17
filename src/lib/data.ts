@@ -1,4 +1,5 @@
-import dbConnect from "./dbConnect"
+// import dbConnect from "./dbConnect"
+import { connectDB } from "./utils"
 import { User } from "@/models/user"
 import { Post } from "@/models/post"
 import { unstable_noStore as noStore } from "next/cache"
@@ -21,7 +22,7 @@ import { unstable_noStore as noStore } from "next/cache"
 
 export const getPosts = async () => {
   try {
-    await dbConnect()
+    connectDB()
     const posts = await Post.find()
     return posts
   } catch (error) {
@@ -32,7 +33,7 @@ export const getPosts = async () => {
 
 export const getPost = async (slug: string) => {
   try {
-    await dbConnect()
+    connectDB()
     const post = await Post.findOne({ slug })
     return post
   } catch (error) {
@@ -43,7 +44,7 @@ export const getPost = async (slug: string) => {
 
 export const getUsers = async () => {
   try {
-    await dbConnect()
+    connectDB()
     const users = await User.find()
     return users
   } catch (error) {
@@ -55,7 +56,7 @@ export const getUsers = async () => {
 export const getUser = async (id: string) => {
   noStore()
   try {
-    await dbConnect()
+    connectDB()
     const user = await User.findById(id)
     return user
   } catch (error) {
