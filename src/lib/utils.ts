@@ -3,14 +3,16 @@ declare global {
   var mongoose: any; // This must be a `var` and not a `let / const`
 }
 const MONGODB_URI: string = process.env.MONGODB_URI!;
-const connection: any = {}
+const connection = {isConnected: 0}
 
 export const connectDB = async () => {
   try {
     if (connection.isConnected) {
       console.log("Using existing connection")
+      console.log(connection)
       return
     }
+    console.log(connection)
     const db = await mongoose.connect(MONGODB_URI)
     connection.isConnected = db.connections[0].readyState
     console.log("Connected to Database")
