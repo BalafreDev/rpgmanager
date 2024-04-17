@@ -21,7 +21,7 @@ import { unstable_noStore as noStore } from "next/cache"
 
 export const getPosts = async () => {
   try {
-    dbConnect()
+    await dbConnect()
     const posts = await Post.find()
     return posts
   } catch (error) {
@@ -32,7 +32,7 @@ export const getPosts = async () => {
 
 export const getPost = async (slug: string) => {
   try {
-    dbConnect()
+    await dbConnect()
     const post = await Post.findOne({ slug })
     return post
   } catch (error) {
@@ -43,7 +43,7 @@ export const getPost = async (slug: string) => {
 
 export const getUsers = async () => {
   try {
-    dbConnect()
+    await dbConnect()
     const users = await User.find()
     return users
   } catch (error) {
@@ -55,7 +55,7 @@ export const getUsers = async () => {
 export const getUser = async (id: string) => {
   noStore()
   try {
-    dbConnect()
+    await dbConnect()
     const user = await User.findById(id)
     return user
   } catch (error) {
