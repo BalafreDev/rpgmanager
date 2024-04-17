@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 declare global {
   var mongoose: any; // This must be a `var` and not a `let / const`
 }
-
+const MONGODB_URI: string = process.env.MONGODB_URI!;
 const connection: any = {}
 
 export const connectDB = async () => {
@@ -11,7 +11,7 @@ export const connectDB = async () => {
       console.log("Using existing connection")
       return
     }
-    const db = await mongoose.connect(process.env.MONGODB_URI!)
+    const db = await mongoose.connect(MONGODB_URI)
     connection.isConnected = db.connections[0].readyState
     console.log("Connected to Database")
 
