@@ -1,6 +1,5 @@
 import CharactersList from "@/components/charactersList/CharactersList";
 import styles from "./characters.module.css"
-import dbConnect from "@/lib/dbConnect";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
