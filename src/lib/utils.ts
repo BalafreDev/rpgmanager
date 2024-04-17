@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 declare global {
-  var mongoose: any; // This must be a `var` and not a `let / const`
+  var mongoose; // This must be a `var` and not a `let / const`
 }
 const MONGODB_URI: string = process.env.MONGODB_URI!;
 const connection = { isConnected: 0 }
