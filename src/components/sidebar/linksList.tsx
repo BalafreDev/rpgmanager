@@ -44,4 +44,14 @@ export const linksList = [
     path: "/blog",
     itemType: "link",
   },
+  {
+    title: "Server Action",
+    path: "/serveractiontest",
+    itemType: "link",
+  },
+  {
+    title: "API Action",
+    path: "/apiactiontest",
+    itemType: "link",
+  },
 ] 

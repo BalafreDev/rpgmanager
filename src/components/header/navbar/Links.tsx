@@ -5,14 +5,17 @@ import Navlink from "./navLink/NavLink"
 import styles from './navbar.module.css'
 import { useState } from "react"
 import ProfileMenuPicture from "./ProfileMenu"
+import { handleLogout } from "@/lib/action"
+import { auth } from "@/lib/auth"
+
+
+export default function Links({session}: {session:any} ) {
+  const [open, setOpen] = useState(false);
 
 // TEMPORARY CONDITIONS
-const session = true
-const isAdmin = true
+const isAdmin = false
 const notifications = ['a', 'b', 'c','a','a'];
 
-export default function Links() {
-  const [open, setOpen] = useState(false);
 
 
   return (
@@ -28,11 +31,11 @@ export default function Links() {
             <>
               {/* <Navlink item={{ title: "Profile", path: "/profile" }} /> */}
               <ProfileMenuPicture />
-              {/* {
-                isAdmin && (
-                  <Navlink item={{ title: "Admin", path: "/admin" }} />
+              {
+                session.user?.isAdmin && (
+                  <Navlink item={{ title: "Admin", path: "/admin", itemType: "link" }} />
                 )
-              } */}
+              }
               <button className={styles.notifButton}>
                 <div>
                   <BellIcon />
@@ -43,9 +46,11 @@ export default function Links() {
                   </div>
                 )}
               </button>
-              <button className={styles.logoutButton}>
+              <form action={handleLogout}>
+              <button className={styles.logoutButton}>              
                 <PowerIcon />
               </button>
+              </form>
             </>
           ) : (
             <Navlink item={{ title: "Login/Signup", path: "/login", itemType: "link" }} />

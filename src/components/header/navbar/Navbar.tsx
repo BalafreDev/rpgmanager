@@ -1,9 +1,16 @@
+import { auth } from "@/lib/auth"
 import Links from "./Links"
 
-export default function Navbar() {
+export default async function Navbar() {
+
+  const session:any = await auth()
+  console.log(session);
+  
+
+
   return (
     <div>
-      <Links />
+      <Links session={session}/>
     </div>
   )
 }

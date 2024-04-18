@@ -34,8 +34,6 @@ const UserSchema = new mongoose.Schema(
     },
     password: {
       type: String,
-      required: true,
-      minlength: 6,
     },
     picture: {
       type: String,
@@ -68,4 +66,4 @@ const UserSchema = new mongoose.Schema(
 
 // export default mongoose.models.User || mongoose.model<IUsers>('User', UserSchema)
 // export default mongoose.models.User || mongoose.model('User', UserSchema)
-export const User = mongoose.models.User || mongoose.model('User', UserSchema)
+export const User = mongoose.models?.User || mongoose.model('User', UserSchema)
