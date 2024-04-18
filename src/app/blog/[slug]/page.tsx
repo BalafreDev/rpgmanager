@@ -5,7 +5,7 @@ import { Suspense } from "react";
 
 // FETCH DATA WITH AN API
 const getData = async (slug: any) => {
-  const res = await fetch(`http://localhost:3000/api/blog/${slug}`);
+  const res = await fetch(`${process.env.CLIENT_URL}/api/blog/${slug}`);
 
   if (!res.ok) {
     throw new Error("Something went wrong!")
