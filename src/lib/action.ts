@@ -8,13 +8,7 @@ import { genSalt, genSaltSync, hash, hashSync } from "bcrypt-ts";
 
 export const addPost = async (formData: any) => {
 
-  // const title = formData.get('title')
-  // const desc = formData.get('desc')
-  // const slug = formData.get('slug')
-
   const { title, desc, slug, userId } = Object.fromEntries(formData)
-
-  // console.log(title, desc, slug, userId);
   
   try {
     connectDB()
@@ -31,7 +25,6 @@ export const addPost = async (formData: any) => {
   } catch (error:any) {
     console.log(error);
     return {error: error.message}
-    
   }
 }
 
@@ -48,13 +41,15 @@ export const deletePost = async (formData: any) => {
   } catch (error:any) {
     console.log(error);
     return {error: error.message}
-    
   }
 }
 
-export const handleGithubLogin = async () => {
-  await signIn("github")
+export const handleGoogleLogin = async () => {
+  await signIn("google")
   }
+// export const handleGithubLogin = async () => {
+//   await signIn("github")
+//   }
 
 export const handleLogout = async () => {
   await signOut()

@@ -24,6 +24,7 @@
 
 .profileMenuButton {
   background:none;
+  padding: 0;
   border: none;
   cursor: pointer;
   align-self: end;
@@ -50,6 +51,7 @@
   border: none;
   margin-left: 20px;
   margin-top: 10px;
+  padding: 0;
 }
 
 .notifButton{
@@ -61,6 +63,7 @@
   border: none;
   margin-left: 20px;
   margin-top: 10px;
+  padding: 0;
 }
 
 .notifNumber {

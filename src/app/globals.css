@@ -74,7 +74,7 @@ button {
   font-weight: bold;
   border: none;
   border-radius: 15px;
-  outline: 1px solid var(--text);
-  padding: 20px;
+  /* outline: 1px solid var(--text); */
+  padding: 15px;
   cursor: pointer;
 }
