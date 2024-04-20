@@ -1,5 +1,5 @@
 import NextAuth from "next-auth"
-import Google from "next-auth/providers/google"
+import google from "next-auth/providers/google"
 // import GitHub from "next-auth/providers/github"
 import { connectDB } from "./utils"
 import { User } from "@/models/user"
@@ -7,7 +7,7 @@ import { User } from "@/models/user"
 
 export const { handlers: { GET, POST }, auth, signIn, signOut } = NextAuth({
   providers: [
-    Google({
+    google({
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET,
     }),
@@ -19,10 +19,10 @@ export const { handlers: { GET, POST }, auth, signIn, signOut } = NextAuth({
   callbacks: {
     async signIn({ user, account, profile }: any) {
       if (account.provider === "google") {
-        
+
         connectDB()
         try {
-          user = await User.findOne({ email: profile.email })
+          const user = await User.findOne({ email: profile.email })
           if (!user) {
             const newUser = new User({
               username: `${profile.given_name} ${profile.family_name}`,
